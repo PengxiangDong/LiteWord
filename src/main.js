@@ -13,12 +13,9 @@ Vue.use(Vant);
 import axios from 'axios'
 Vue.prototype.$http = axios
 
-// 全局导入公共组件
-// import FooterNav from './components/FooterNav.vue'
-// Vue.component('FooterNav', FooterNav)
+// 导入 mock
+import './mock/shop'
 
-
-// 全局配置公共组件
 
 
 

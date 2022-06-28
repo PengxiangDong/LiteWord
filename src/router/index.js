@@ -25,7 +25,10 @@ const routes = [
   {
     name: 'shop',
     path: '/shop',
-    component: () => import('../views/Shop')
+    component: () => import('../views/Shop'),
+    meta: {
+      keepAlive: true
+    }
   },
   // 消息相关路由-吕沁儒
   {
@@ -45,6 +48,14 @@ const routes = [
     path: '/new',
     component: () => import('../views/New')
   },
+
+  // 商品详情页
+  {
+    name: 'details',
+    path: '/details',
+    component: () => import('../views/GoodsDetails.vue')
+  }
+
 ]
 
 const router = new VueRouter({
