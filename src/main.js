@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import './mock/home'
+import waterfall from 'vue-waterfall2'
+Vue.use(waterfall)
 
 
 // 导入VantUI
