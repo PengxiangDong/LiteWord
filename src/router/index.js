@@ -21,6 +21,11 @@ const routes = [
     path: '/home',
     component: () => import('../views/Home')
   },
+  {
+    name: 'HomeDetails',
+    path: '/home/findOne',
+    component: () => import('../views/HomeDetails.vue')
+  },
   // 商城相关路由-负责人;董鹏翔
   {
     name: 'shop',
