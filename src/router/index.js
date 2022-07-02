@@ -4,10 +4,15 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  // 默认路径 重定向为 首页
+  // 默认路径 重定向为 刚进入页面
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/page'
+  },
+  // 
+  {
+    path: '/page',
+    component: () => import('../views/Page.vue')
   },
   // 登录相关路由-负责人：石磊
   {

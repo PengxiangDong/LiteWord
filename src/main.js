@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// 引入mock
+import "./mock/login/index";
 
 // 导入VantUI
 import Vant from 'vant';
