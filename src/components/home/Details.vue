@@ -1,109 +1,107 @@
 <template>
   <!-- 详情 -->
-  <div id="app" >
-    <div >
+  <div id="app">
+    <div>
       <!-- {{item.title}} -->
-    <van-nav-bar title="" left-text="" @click-left="onClickLeft">
-      <template #right>
-        <van-icon
-          name="share"
-          size="18"
-          @click="showShare = true"
-          class="bar"
-        />
-        <van-share-sheet
-          v-model="showShare"
-          title="立即分享给好友"
-          :options="options"
-        />
-      </template>
-      <template #left>
-        <van-icon name="arrow-left" size="18" class="bar" />
-      </template>
-      <template #title>
-        <div class="img">
-         
-          <!-- <img src="../../assets/tx.jpg" alt=""> -->
-          <!-- <span>123</span> -->
-          <!-- {{this.findOne.userInfo.username}} -->
-        </div>
-        <van-button
-          round
-          type="info"
-          size="small"
-          block
-          plain
-          color="#e4717f"
-          :text="gzz"
-          @click="gz"
-        ></van-button>
-      </template>
-      
-    </van-nav-bar>
-     <img class="imgtou" :src="findOne.userInfo.headPhoto" alt="" />
-    <span class="spantou">{{findOne.userInfo.username}}</span>
-    <!-- 轮播图 -->
-    <div >
-      <van-swipe class="my-swipe" indicator-color="white"  >
-        <van-swipe-item v-for="item in findtwo" :key="item.id">
-          <img :src="item.images" alt="">
-        </van-swipe-item>
-      </van-swipe>
-    </div>
-    <!-- 标题内容区域 -->
-    <div class="total">
-      <h4>{{this.findOne.title}}</h4>
-      <!-- <h1>{{this.workImages.images}}</h1> -->
-      <p>{{this.findOne.depict}}</p>
-      <br /><br />
-      <span>{{this.findOne.pubdate}}</span>
-      <van-divider />
-    </div>
-    <!-- 评论 -->
-    <div class="pl">
-      <span>共{{this.findOne.commentNumber}}条评论</span><br />
-      <img src="../../assets/tx.jpg" alt="" />
-      <input type="text" placeholder="说点什么吧,万一火了呢~~~" />
-      <van-divider />
-    </div>
-    <div class="sxpl" v-for="item in findthree" :key="item.id">
-      <img :src="item.userInfo.headPhoto" alt="" />
-      <span>{{item.userInfo.username}}</span>
-      <p>{{item.comment}}</p>
-      <span class="spanday">{{item.commentDate}}</span>
-    </div>
-    
-
-    
-
-    <br /><br /><br /><br />
-
-    <!-- 底部 -->
-    <div class="di">
-      <div class="d">
-        <input type="text" class="form_input" placeholder="说点什么吧...." />
-        <van-icon name="edit" size="25px" />
+      <van-nav-bar title="" left-text="" @click-left="onClickLeft">
+        <template #right>
+          <van-icon
+            name="share"
+            size="18"
+            @click="showShare = true"
+            class="bar"
+          />
+          <van-share-sheet
+            v-model="showShare"
+            title="立即分享给好友"
+            :options="options"
+          />
+        </template>
+        <template #left>
+          <van-icon name="arrow-left" size="18" class="bar" />
+        </template>
+        <template #title>
+          <div class="img">
+            <!-- <img src="../../assets/tx.jpg" alt=""> -->
+            <!-- <span>123</span> -->
+            <!-- {{this.findOne.userInfo.username}} -->
+          </div>
+          <van-button
+            round
+            type="info"
+            size="small"
+            block
+            plain
+            color="#e4717f"
+            :text="gzz"
+            @click="gz"
+          ></van-button>
+        </template>
+      </van-nav-bar>
+      <img class="imgtou" :src="findOne.userInfo.headPhoto" alt="" />
+      <span class="spantou">{{ findOne.userInfo.username }}</span>
+      <!-- 轮播图 -->
+      <div>
+        <van-swipe class="my-swipe" indicator-color="white">
+          <van-swipe-item v-for="item in findtwo" :key="item.id">
+            <img :src="item.images" alt="" />
+          </van-swipe-item>
+        </van-swipe>
       </div>
-    </div>
-    <div class="righticon">
-      <van-icon size="30px" name="like" :class="abc" @click="fun" />
+      <!-- 标题内容区域 -->
+      <div class="total">
+        <h4>{{ this.findOne.title }}</h4>
+        <!-- <h1>{{this.workImages.images}}</h1> -->
+        <p>{{ this.findOne.depict }}</p>
+        <br /><br />
+        <span>{{ this.findOne.pubdate }}</span>
+        <van-divider />
+      </div>
+      <!-- 评论 -->
+      <div class="pl">
+        <span>共{{ this.findOne.commentNumber }}条评论</span><br />
+        <img src="../../assets/tx.jpg" alt="" />
+        <input type="text" placeholder="说点什么吧,万一火了呢~~~" />
+        <van-divider />
+      </div>
+      <div class="sxpl" v-for="item in findthree" :key="item.id">
+        <img :src="item.userInfo.headPhoto" alt="" />
+        <span>{{ item.userInfo.username }}</span>
+        <p>{{ item.comment }}</p>
+        <span class="spanday">{{ item.commentDate }}</span>
+      </div>
 
-      <span class="didi">&nbsp; {{this.findOne.likeWorkNumber}}  &nbsp;</span>
-      <van-icon size="30px" name="star" :class="abc1" @click="fun1" />
-      <span class="didi">&nbsp; {{this.findOne.collectNumber}} &nbsp; </span>
-      <van-icon size="30px" name="chat-o" />
-      <span class="didi">&nbsp;  {{this.findOne.commentNumber}}</span>
-    </div>
+      <br /><br /><br /><br />
+
+      <!-- 底部 -->
+      <div class="di">
+        <div class="d">
+          <input type="text" class="form_input" placeholder="说点什么吧...." />
+          <van-icon name="edit" size="25px" />
+        </div>
+      </div>
+      <div class="righticon">
+        <van-icon size="30px" name="like" :class="abc" @click="fun" />
+
+        <span class="didi"
+          >&nbsp; {{ this.findOne.likeWorkNumber }} &nbsp;</span
+        >
+        <van-icon size="30px" name="star" :class="abc1" @click="fun1" />
+        <span class="didi"
+          >&nbsp; {{ this.findOne.collectNumber }} &nbsp;
+        </span>
+        <van-icon size="30px" name="chat-o" />
+        <span class="didi">&nbsp; {{ this.findOne.commentNumber }}</span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import $ from "jquery";
 export default {
   data() {
     return {
-      id: '',
+      id: "",
       showShare: false,
       options: [
         [
@@ -185,40 +183,32 @@ export default {
     // 获取详情页数据
     async getfindone() {
       const { data: res } = await this.$http({
-        method: 'get',
-        url: 'http://172.16.107.58:8080/home/findOne',
+        method: "get",
+        url: "http://172.16.107.58:8080/home/findOne",
         params: {
-          workId: this.$route.query.workId
+          workId: this.$route.query.workId,
         },
-        
-      })
+      });
       // console.log(res.data.workImages);
       this.findOne = res.data;
       console.log(this.findOne);
-      this.findtwo=res.data.workImages
+      this.findtwo = res.data.workImages;
       // console.log(this.findtwo);
-      this.findthree=res.data.tabComments;
+      this.findthree = res.data.tabComments;
       // console.log(this.findthree);
       // console.log(this.findthree.length);
-      for (let i = 0; i < this.findthree.length ;i++){
-          this.findfour=this.findthree.userInfo
-          this.findfive= this.findfour
+      for (let i = 0; i < this.findthree.length; i++) {
+        this.findfour = this.findthree.userInfo;
+        this.findfive = this.findfour;
       }
       // console.log(this.findfive);
-        // this.findfour=res.data.tabComments.userInfo
-        // console.log(res.data.tabComments[0].userInfo);
+      // this.findfour=res.data.tabComments.userInfo
+      // console.log(res.data.tabComments[0].userInfo);
       // console.log(this.findfour);
     },
-
-
-   
-   
   },
   created() {
     this.getfindone();
-
-   
-  
   },
 };
 </script>
@@ -239,33 +229,31 @@ export default {
 .bar {
   color: rgb(111, 111, 111);
 }
-  .imgtou {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: aqua;
-    margin-top: 10px;
-    position: absolute;
-    left: 60px;
-    margin-top: -35px;
-    z-index: 99999;
-  }
-  .spantou {
-    display: inline-block;
-    height: 46px;
-    line-height: 46px;
-    position: absolute;
-     left: 90px;
-    margin-top: -43px;
-    z-index: 99999;
-  }
+.imgtou {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: aqua;
+  margin-top: 10px;
+  position: absolute;
+  left: 60px;
+  margin-top: -35px;
+  z-index: 99999;
+}
+.spantou {
+  display: inline-block;
+  height: 46px;
+  line-height: 46px;
+  position: absolute;
+  left: 90px;
+  margin-top: -43px;
+  z-index: 99999;
+}
 .img {
   width: 300px;
   height: 46px;
   //  line-height: 46px;、
   position: relative;
-
-  
 }
 .van-button {
   width: 45px;
@@ -415,7 +403,7 @@ export default {
 }
 .sxpl {
   position: relative;
-margin-top: 20px;
+  margin-top: 20px;
   img {
     width: 25px;
     height: 25px;
@@ -430,7 +418,7 @@ margin-top: 20px;
     color: #818181;
     font-size: 12px;
   }
-   .spanday {
+  .spanday {
     position: absolute;
     left: 250px;
     top: 5px;
