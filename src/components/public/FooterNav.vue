@@ -29,8 +29,10 @@
       @click="$router.push('/my')"
       class="item"
     >
+
       我
     </div>
+       
   </div>
 </template>
 

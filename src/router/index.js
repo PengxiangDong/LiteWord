@@ -39,6 +39,51 @@ const routes = [
     path: '/my',
     component: () => import('../views/My')
   },
+  // 编辑资料
+  {
+    name:'introduce',
+    path:'/introduce',
+    component:()=> import('../components/my/introduce')
+
+  },
+  // 编辑姓名
+  {
+    name:'Booklittle',
+    path:'/Booklittle',
+    component:()=> import('../components/my/Booklittle')
+  },
+  {
+    // 编辑简介
+    name:'Instrouc',
+    path:'/Instrouc',
+    component:()=> import('../components/my/Instrouc')
+  },
+  {
+    name:'Gender',
+    path:'/Gender',
+    component:()=> import('../components/my/Gender')
+  },
+  {
+    name:'Birthdoy',
+    path:'/Birthdoy',
+    component:()=> import('../components/my/Birthdoy')
+  },
+  {
+    name:'Regin',
+    path:'/Regin',
+    component:()=> import('../components/my/Regin')
+  },
+  {
+    name:'Teacher',
+    path:'/Teacher',
+    component:()=> import('../components/my/Teacher')
+  },
+  {
+    name:'School',
+    path:'/School',
+    component:()=> import('../components/my/School')
+  },
+
   // 发布页面 相关路由-待定
   {
     name: 'new',
