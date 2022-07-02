@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -25,16 +24,32 @@ const routes = [
   {
     name: 'shop',
     path: '/shop',
-    component: () => import('../views/Shop'),
-    meta: {
-      keepAlive: true
-    }
+    component: () => import('../views/ShopSerch')
   },
   // 消息相关路由-吕沁儒
   {
     name: 'message',
     path: '/message',
     component: () => import('../views/Message')
+  },
+  {
+    name:'xiang',
+    path:'/xiang',
+    component: () => import('../components/message/Msg')
+  },{
+    name:'guan',
+    path:'/guan',
+    component: () => import('../components/message/Guanzhu')
+  },
+  {
+    name:'zan',
+    path:'/zan',
+    component: () => import('../components/message/Zan')
+  },
+  {
+    name:'kfy',
+    path:'/kfy',
+    component: () => import('../components/message/Kfy')
   },
   // 我的 相关路由-郝兰
   {
@@ -48,14 +63,6 @@ const routes = [
     path: '/new',
     component: () => import('../views/New')
   },
-
-  // 商品详情页
-  {
-    name: 'details',
-    path: '/details',
-    component: () => import('../views/GoodsDetails.vue')
-  }
-
 ]
 
 const router = new VueRouter({
