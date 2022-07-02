@@ -14,19 +14,24 @@ const routes = [
     path: '/page',
     component: () => import('../views/Page.vue')
   },
-  // 登录相关路由-负责人：石磊
+  // 登录相关路由-负责人:石磊
   {
     name: 'login',
     path: '/login',
     component: () => import('../views/Login')
   },
-  // 首页相关路由-负责人：贾子正
+  // 首页相关路由-负责人:贾子正
   {
     name: 'home',
     path: '/home',
     component: () => import('../views/Home')
   },
-  // 商城相关路由-负责人；董鹏翔
+  {
+    name: 'HomeDetails',
+    path: '/home/findOne',
+    component: () => import('../views/HomeDetails.vue')
+  },
+  // 商城相关路由-负责人;董鹏翔
   {
     name: 'shop',
     path: '/shop',

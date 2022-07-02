@@ -2,6 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import './mock/home'
+import waterfall from 'vue-waterfall2'
+import 'animate.css';
+Vue.use(waterfall)
+import { Popup } from 'vant';
+Vue.use(Popup);
 
 // 引入mock
 import "./mock/login/index";
