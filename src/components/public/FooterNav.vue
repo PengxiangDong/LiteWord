@@ -37,7 +37,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    console.log(this.$route);
+  },
+};
 </script>
 
 <style lang="less" scoped>
